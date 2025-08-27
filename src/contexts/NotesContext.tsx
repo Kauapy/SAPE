@@ -21,7 +21,7 @@ export function NotesProvider({ children }: { children: React.ReactNode }) {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [searchTerm, setSearchTerm] = useState('');
 
-  // Load notes from localStorage on mount
+  
   useEffect(() => {
     const savedNotes = localStorage.getItem('eduStudyNotes');
     if (savedNotes) {
@@ -32,7 +32,7 @@ export function NotesProvider({ children }: { children: React.ReactNode }) {
       }));
       setNotes(parsedNotes);
     } else {
-      // Add sample notes if none exist
+      
       const sampleNotes: Note[] = [
         {
           id: '1',
@@ -63,7 +63,7 @@ export function NotesProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
-  // Save notes to localStorage whenever notes change
+  
   useEffect(() => {
     localStorage.setItem('eduStudyNotes', JSON.stringify(notes));
   }, [notes]);

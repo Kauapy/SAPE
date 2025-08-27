@@ -32,14 +32,14 @@ export function Sidebar({ isOpen, onClose, activeView, onViewChange }: SidebarPr
               <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <BookOpen className="w-5 h-5 text-white" />
               </div>
-              <h2 className="text-lg font-semibold text-gray-900">EduStudy</h2>
+              <h2 className="text-lg font-semibold text-gray-900">Sape</h2>
             </div>
             <button
               onClick={onClose}
-              className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+              className="p-2 hover:bg-gray-100 rounded-lg transition-colors" 
             >
               <X className="w-5 h-5 text-gray-500" />
-            </button>
+            </button> 
           </div>
         </div>
 

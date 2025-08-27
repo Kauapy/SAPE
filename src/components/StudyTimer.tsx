@@ -9,7 +9,7 @@ export function StudyTimer() {
   const [sessions, setSessions] = useState(0);
 
   useEffect(() => {
-    let interval: NodeJS.Timeout | null = null;
+    let interval: ReturnType<typeof setInterval> | null = null;
 
     if (isActive && (minutes > 0 || seconds > 0)) {
       interval = setInterval(() => {
@@ -21,22 +21,22 @@ export function StudyTimer() {
         }
       }, 1000);
     } else if (isActive && minutes === 0 && seconds === 0) {
-      // Timer finished
+     
       setIsActive(false);
       if (!isBreak) {
         setSessions(sessions + 1);
-        // Start break
+        
         setIsBreak(true);
         setMinutes(5);
         setSeconds(0);
       } else {
-        // Break finished
+        
         setIsBreak(false);
         setMinutes(25);
         setSeconds(0);
       }
       
-      // Play notification sound (if available)
+      
       if ('Notification' in window && Notification.permission === 'granted') {
         new Notification(
           isBreak ? 'Pausa terminada!' : 'Sessão de estudo concluída!', 
