@@ -58,6 +58,14 @@ export function NotesProvider({ children }: { children: React.ReactNode }) {
           createdAt: new Date(),
           updatedAt: new Date(),
         },
+        {
+          id: '4',
+          title: 'Célula Animal vs Célula Vegetal',
+          content: '**Célula Animal:**\n• Não possui parede celular\n• Possui centríolos\n• Armazenamento de glicogênio\n\n**Célula Vegetal:**\n• Possui parede celular de celulose\n• Não possui centríolos\n• Armazenamento de amido\n• Presença de cloroplastos para fotossíntese',
+          category: 'Biologia',
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        }
       ];
       setNotes(sampleNotes);
     }
